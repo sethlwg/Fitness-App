@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@200;300;400;600&family=Roboto+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root{
+	--main-color: var(#dc7d17);
+}
 
 * {
     font-family: 'Nunito', sans-serif;
@@ -30,8 +33,8 @@ section{
 /* LOGIN PAGE */
 
 #login{
-    background: url(/Images/804864.jpg);
-    min-height: 100vh;
+   background: url(Images/804864.jpg);
+	min-height: 100vh;
     background-size: cover !important;
     background-position: center !important;
     margin: 0;
@@ -75,6 +78,7 @@ section{
     color: white;
     align-items: center;
     justify-content: space-between;
+	margin-top: 2rem;
 }
 
 .login-title{
@@ -82,16 +86,101 @@ section{
   flex: 50%;
 }
 
+.login-title h1,h3{
+	font-family: 'Bebas Neue';
+	font-size: 10rem;
+}
+
+.login-title h3{
+	font-size: 3rem;
+	text-align: center;
+	color: #dc7d17;
+}
+
+/* LOGIN FORM */
 .login-form{
     padding: 10px;
-    flex: 50%;
+    flex:50%;
+	/*margin: 4rem;*/
+	color: black;
 }
+
+.login-form .card .card-body h2{
+	font-size: 2rem;
+}
+
+.login-form .card{
+	background: transparent;
+	backdrop-filter: blur(10px);
+	color: white;
+	border-color: rgba(255, 255, 255, 0.21);
+	border-radius: 10px;
+}
+
+
+/*
+.login-form .form-check{
+	margin: auto;
+}
+
+.login-form .forgot{
+	
+}
+
+.login-form label{
+	display: block;
+	margin: auto;
+	text-align: center;
+	padding: 1.5rem;
+}
+
+.login-form input{
+	margin: auto;
+	width: 40rem;
+}
+
+.login-form button{
+	background: #dc7d17;
+	border: none;
+	border-radius: 0;
+	padding: 1rem 2rem 1rem 2rem;
+	font-size: 2rem;
+	font-family: 'Poppins', sans-serif;
+}
+
+.login-form .form-check-label{
+	margin: auto;
+}
+*/
 
 @media (max-width: 800px) {
     .login-container {
       flex-direction: column;
     }
+
+	.login-container .login-title  {
+		display: none;
+	}
+
+	/*
+	.login-container .login-form{
+		margin: 2rem;
+	}
+	*/
 }
+
+@media (max-width: 1000px) {
+	/*
+    .login-container {
+      flex-direction: column;
+    }
+*/
+	.login-container .login-title {
+		display: none;
+	}
+
+}
+
 /* SERVICES */
 
 a,p,h1,h2,h3,h4,ul {
@@ -209,16 +298,26 @@ a,p,h1,h2,h3,h4,ul {
 
 #testimonial .text-test{
     color: #dc7d17;
+	font-size: 2rem;
+	padding: 2rem;
 }
+
+#testimonial .althete-desc{
+	font-size: 2rem;
+	padding-bottom: 2rem;
+}
+
 /*
 #testimonial .card-test{
     background: rgba(43, 43, 43, 0.705);
     padding: 2rem;
 }
 */
+
 #testimonial .card-test img {
     border-radius: 50%;
 }
+
 /* CONTACT */
 
 #contact {
@@ -229,10 +328,28 @@ a,p,h1,h2,h3,h4,ul {
 	color: #fff;
 }
 
+#contact-form{
+	margin: auto;
+}
+
 /* FOOTER */
 
 footer {
 	font-family: "Poppins", sans-serif;
 	background-color: #000000ef;
 	color: #fff;
+}
+
+
+/* JAVASCRIPT REVEAL */
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
 }
