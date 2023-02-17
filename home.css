@@ -3,8 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@200;300;400;600&family=Roboto+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-:root{
-	--main-color: var(#dc7d17);
+:root {
+	--main-color: #dc7d17;
+	--second-bg: #211f24;
+	--second-text: rgba(255, 255, 255, 0.59);
 }
 
 * {
@@ -17,6 +19,10 @@
     border: none;
     text-transform: capitalize;
     transition: all 0.2s linear;
+}
+
+body{
+	background: whitesmoke;
 }
 
 html {
@@ -33,7 +39,8 @@ section{
 /* LOGIN PAGE */
 
 #login{
-   background: url(Images/804864.jpg);
+	background-color: rgba(255, 255, 255, 0.59);
+   	background-image: url(Images/804864.jpg);
 	min-height: 100vh;
     background-size: cover !important;
     background-position: center !important;
@@ -56,7 +63,7 @@ section{
 }
 
 .navbar .navbar-nav a:hover{
-    color: #dc7d17;
+    color: var(--main-color);
 }
 
 .navbar .navbar-brand {
@@ -67,9 +74,11 @@ section{
 }
 
 .navbar .custom-logo{
-    color: #dc7d17;
+    color: var(--main-color);
 }
 
+/* TOP PAGE */
+/*
 .login-container{
     display: flex;
     flex-direction: row;
@@ -80,105 +89,47 @@ section{
     justify-content: space-between;
 	margin-top: 2rem;
 }
-
+*/
 .login-title{
   padding: 10px;
   flex: 50%;
+  color: white;
+  margin-top: 10rem;
+}
+
+.login-title span{
+	font-size: 4rem;
+	color:rgba(255, 255, 255, 0.59);
+	font-family: 'Bebas Neue';
+	line-height: 0;
+}
+
+.login-title .period{
+	color: var(--main-color);
+	font-size: 6rem;
 }
 
 .login-title h1,h3{
 	font-family: 'Bebas Neue';
-	font-size: 10rem;
+	font-size: 5rem;
+	margin: auto;
+	text-align: center;
 }
 
 .login-title h3{
 	font-size: 3rem;
 	text-align: center;
-	color: #dc7d17;
+	color: var(--main-color);
 }
 
-/* LOGIN FORM */
-.login-form{
-    padding: 10px;
-    flex:50%;
-	/*margin: 4rem;*/
-	color: black;
-}
-
-.login-form .card .card-body h2{
-	font-size: 2rem;
-}
-
-.login-form .card{
-	background: transparent;
-	backdrop-filter: blur(10px);
-	color: white;
-	border-color: rgba(255, 255, 255, 0.21);
-	border-radius: 10px;
-}
-
-
-/*
-.login-form .form-check{
-	margin: auto;
-}
-
-.login-form .forgot{
-	
-}
-
-.login-form label{
-	display: block;
-	margin: auto;
+.login-title .login-btn{
 	text-align: center;
-	padding: 1.5rem;
-}
-
-.login-form input{
-	margin: auto;
-	width: 40rem;
-}
-
-.login-form button{
-	background: #dc7d17;
+	margin: 5rem;
+	background:var(--main-color);
 	border: none;
-	border-radius: 0;
 	padding: 1rem 2rem 1rem 2rem;
-	font-size: 2rem;
-	font-family: 'Poppins', sans-serif;
-}
-
-.login-form .form-check-label{
-	margin: auto;
-}
-*/
-
-@media (max-width: 800px) {
-    .login-container {
-      flex-direction: column;
-    }
-
-	.login-container .login-title  {
-		display: none;
-	}
-
-	/*
-	.login-container .login-form{
-		margin: 2rem;
-	}
-	*/
-}
-
-@media (max-width: 1000px) {
-	/*
-    .login-container {
-      flex-direction: column;
-    }
-*/
-	.login-container .login-title {
-		display: none;
-	}
-
+	border-radius: 0;
+	color: white;
 }
 
 /* SERVICES */
@@ -216,7 +167,7 @@ a,p,h1,h2,h3,h4,ul {
 	transform: translateX(-50%);
 	width: 140px;
 	height: 1px;
-	background-color: #dc7d17;
+	background-color: var(--main-color);
 }
 
 .section-services .header-section .title:after {
@@ -227,15 +178,15 @@ a,p,h1,h2,h3,h4,ul {
 	transform: translateX(-50%);
 	width: 45px;
 	height: 3px;
-	background-color: #dc7d17;
+	background-color: var(--main-color);
 }
 
 .section-services .header-section .title span {
-	color: #dc7d17;
+	color: var(--main-color);
 }
 
 .section-services .header-section .description {
-	color: #6f6f71;
+	color: var(--second-text);
 }
 
 .section-services .single-service {
@@ -252,7 +203,7 @@ a,p,h1,h2,h3,h4,ul {
 .section-services .single-service .part-1 i {
 	margin-bottom: 25px;
 	font-size: 50px;
-	color: #dc7d17;
+	color: var(--main-color);
 }
 
 .section-services .single-service .part-1 .title {
@@ -287,23 +238,24 @@ a,p,h1,h2,h3,h4,ul {
 /* TESTIMONIAL */
 #testimonial{
     font-family: "Poppins", sans-serif;
+	background: whitesmoke;
 }
 
 #testimonial .title{
     font-family: 'Bebas Neue';
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 4rem;
 
 }
 
 #testimonial .text-test{
-    color: #dc7d17;
-	font-size: 2rem;
+    color: gray;
+	font-size: 1.5rem;
 	padding: 2rem;
 }
 
 #testimonial .althete-desc{
-	font-size: 2rem;
+	font-size: 1.5rem;
 	padding-bottom: 2rem;
 }
 
@@ -315,7 +267,7 @@ a,p,h1,h2,h3,h4,ul {
 */
 
 #testimonial .card-test img {
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 /* CONTACT */
@@ -332,6 +284,20 @@ a,p,h1,h2,h3,h4,ul {
 	margin: auto;
 }
 
+#contact h2{
+	font-family: 'Bebas Neue';
+	font-size: 4rem;
+}
+
+#contact .contact-btn{
+	padding: 1rem 2rem 1rem 2rem;
+	color: white;
+	background: #211f24;
+	margin: 3rem;
+	border-radius: 0;
+	border: none;
+}
+
 /* FOOTER */
 
 footer {
@@ -340,6 +306,14 @@ footer {
 	color: #fff;
 }
 
+footer p{
+	color: whitesmoke;
+}
+
+footer h6{
+	font-family: 'Bebas Neue';
+	font-size: 2rem;
+}
 
 /* JAVASCRIPT REVEAL */
 .reveal{
@@ -353,3 +327,19 @@ footer {
     transform: translateY(0);
     opacity: 1;
 }
+
+/* MEDIA */
+@media (max-width: 450px){
+    
+    html{
+        font-size: 55%
+    }
+
+}
+
+@media (max-width: 991px){
+	html{
+		font-size: 55%;
+	}
+}
+
