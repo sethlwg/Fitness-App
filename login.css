@@ -1,0 +1,15 @@
+:root {
+	--main-color: #dc7d17;
+	--second-bg: #211f24;
+	--second-text: rgba(255, 255, 255, 0.59);
+}
+
+.login{
+    background: var(--second-bg);
+}
+
+.login form .special,.login form .special i {
+    color: var(--main-color);
+}
+
+
