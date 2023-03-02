@@ -1,80 +1,92 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Roboto+Condensed:wght@300&family=Rock+Salt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@200;300;400;600&family=Roboto+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Roboto+Condensed:wght@300&family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@200;300;400;600&family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 :root {
-	--main-color: #dc7d17;
-	--second-bg: #211f24;
-	--second-text: rgba(255, 255, 255, 0.59);
+  --main-color: #dc7d17;
+  --second-bg: #211f24;
+  --second-text: rgba(255, 255, 255, 0.59);
 }
 
 * {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    text-transform: capitalize;
-    transition: all 0.2s linear;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
 }
 
-body{
-	background: whitesmoke;
+body {
+  background: whitesmoke;
 }
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
-    overflow-x: hidden;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
 }
 
-section{
-    padding: 5rem 9%;
+section {
+  padding: 5rem 9%;
 }
 
 /* LOGIN PAGE */
 
-#login{
-	background-color: rgba(255, 255, 255, 0.59);
-   	background-image: url(Images/804864.jpg);
-	min-height: 100vh;
-    background-size: cover !important;
-    background-position: center !important;
-    margin: 0;
-    padding: 0;
+#login {
+  background-color: rgba(255, 255, 255, 0.59);
+  background-image: url(Images/804864.jpg);
+  min-height: 100vh;
+  background-size: cover !important;
+  background-position: center !important;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar */
 
-.navbar{
-    background: transparent;
-    position: sticky;
+.navbar.sticky-top {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
 }
 
-.navbar .navbar-nav a{
-    color: white;
-    padding: 2rem;
-    font-size: 2rem;
-    text-align: right;
+.navbar .navbar-nav a {
+  color: white;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: right;
 }
 
-.navbar .navbar-nav a:hover{
-    color: var(--main-color);
+.navbar .navbar-nav .dropdown-toggle {
+  color: black; /* sets the text color of the drop-down toggle to a different color */
+  background-color: transparent; /* sets the background color of the drop-down toggle to white */
+}
+
+.navbar .navbar-nav a:hover {
+  color: #dc7d17;
 }
 
 .navbar .navbar-brand {
-    font-size: 2.5rem;
-    font-weight: 600;
-    padding: 2rem;
-    color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 2rem;
+  color: black;
 }
 
-.navbar .custom-logo{
-    color: var(--main-color);
+.navbar .custom-logo {
+  color: #dc7d17;
+}
+
+.navbar-scroll {
+  background-color: #787a7b !important;
 }
 
 /* TOP PAGE */
@@ -90,173 +102,211 @@ section{
 	margin-top: 2rem;
 }
 */
-.login-title{
-  padding: 10px;
+.login-title {
+  padding: 0px;
   flex: 50%;
   color: white;
   margin-top: 10rem;
 }
 
-.login-title span{
-	font-size: 4rem;
-	color:rgba(255, 255, 255, 0.59);
-	font-family: 'Bebas Neue';
-	line-height: 0;
+.login-title span {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.59);
+  font-family: "Bebas Neue";
+  line-height: 0;
 }
 
-.login-title .period{
-	color: var(--main-color);
-	font-size: 6rem;
+.login-title .period {
+  color: var(--main-color);
+  font-size: 6rem;
 }
 
-.login-title h1,h3{
-	font-family: 'Bebas Neue';
-	font-size: 5rem;
-	margin: auto;
-	text-align: center;
+.login-title h1,
+h3 {
+  font-family: "Bebas Neue";
+  font-size: 5rem;
+  margin: auto;
+  text-align: center;
 }
 
-.login-title h3{
-	font-size: 3rem;
-	text-align: center;
-	color: var(--main-color);
+.login-title h3 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--main-color);
+}
+/* Items disappear into hamburger icon*/
+@media screen and (max-width: 576px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-toggler-icon {
+    display: block;
+    background-color: #dc7d17;
+    /* filter: invert(87%) sepia(100%) saturate(7000%) hue-rotate(1000deg)
+			brightness(600%) contrast(114%);*/
+  }
 }
 
-.login-title .login-btn{
-	text-align: center;
-	margin: 5rem;
-	background:var(--main-color);
-	border: none;
-	padding: 1rem 2rem 1rem 2rem;
-	border-radius: 0;
-	color: white;
+@media screen and (min-width: 576px) {
+  .navbar-nav {
+    display: flex !important;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0 1rem;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    .login-container {
+      flex-direction: column;
+    }
+  }
+}
+.login-title .login-btn {
+  text-align: center;
+  margin: 5rem;
+  background: var(--main-color);
+  border: none;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0;
+  color: white;
 }
 
 /* SERVICES */
 
-a,p,h1,h2,h3,h4,ul {
-	margin: 0;
-	padding: 0;
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .section-services {
-	padding-top: 110px;
-	padding-bottom: 120px;
-	font-family: "Poppins", sans-serif;
-	background-color: #211f24;
-	color: #fff;
+  padding-top: 110px;
+  padding-bottom: 120px;
+  font-family: "Poppins", sans-serif;
+  background-color: #211f24;
+  color: #fff;
 }
 
 .section-services .header-section {
-	margin-bottom: 35px;
+  margin-bottom: 35px;
 }
 
 .section-services .header-section .title {
-	position: relative;
-	margin-bottom: 40px;
-	padding-bottom: 25px;
-	text-transform: uppercase;
-	font-weight: 700;
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .section-services .header-section .title:before {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 140px;
-	height: 1px;
-	background-color: var(--main-color);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 1px;
+  background-color: var(--main-color);
 }
 
 .section-services .header-section .title:after {
-	content: "";
-	position: absolute;
-	bottom: -1px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 45px;
-	height: 3px;
-	background-color: var(--main-color);
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 3px;
+  background-color: var(--main-color);
 }
 
 .section-services .header-section .title span {
-	color: var(--main-color);
+  color: var(--main-color);
 }
 
 .section-services .header-section .description {
-	color: var(--second-text);
+  color: var(--second-text);
 }
 
 .section-services .single-service {
-	margin-top: 40px;
-	background-color: #24252a;
-	box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  margin-top: 40px;
+  background-color: #24252a;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .section-services .single-service .part-1 {
-	padding: 40px 40px 25px;
-	border-bottom: 2px solid #1d1e23;
+  padding: 40px 40px 25px;
+  border-bottom: 2px solid #1d1e23;
 }
 
 .section-services .single-service .part-1 i {
-	margin-bottom: 25px;
-	font-size: 50px;
-	color: var(--main-color);
+  margin-bottom: 25px;
+  font-size: 50px;
+  color: var(--main-color);
 }
 
 .section-services .single-service .part-1 .title {
-	font-size: 17px;
-	font-weight: 700;
-	letter-spacing: 0.02em;
-	line-height: 1.8em;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.8em;
 }
 
 .section-services .single-service .part-2 {
-	padding: 30px 40px 40px;
+  padding: 30px 40px 40px;
 }
 
 .section-services .single-service .part-2 .description {
-	margin-bottom: 22px;
-	color: #6f6f71;
-	font-size: 14px;
-	line-height: 1.8em;
+  margin-bottom: 22px;
+  color: #6f6f71;
+  font-size: 14px;
+  line-height: 1.8em;
 }
 
 .section-services .single-service .part-2 a {
-	color: #fff;
-	font-size: 14px;
-	text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .section-services .single-service .part-2 a i {
-	margin-right: 10px;
-	color: #dc7d17;
+  margin-right: 10px;
+  color: #dc7d17;
 }
 
 /* TESTIMONIAL */
-#testimonial{
-    font-family: "Poppins", sans-serif;
-	background: whitesmoke;
+#testimonial {
+  font-family: "Poppins", sans-serif;
+  background: whitesmoke;
 }
 
-#testimonial .title{
-    font-family: 'Bebas Neue';
-    text-transform: uppercase;
-    font-size: 4rem;
-
+#testimonial .title {
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  font-size: 4rem;
 }
 
-#testimonial .text-test{
-    color: gray;
-	font-size: 1.5rem;
-	padding: 2rem;
+#testimonial .text-test {
+  color: gray;
+  font-size: 1.5rem;
+  padding: 2rem;
 }
 
-#testimonial .althete-desc{
-	font-size: 1.5rem;
-	padding-bottom: 2rem;
+#testimonial .althete-desc {
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 /*
@@ -267,79 +317,76 @@ a,p,h1,h2,h3,h4,ul {
 */
 
 #testimonial .card-test img {
-    border-radius: 10%;
+  border-radius: 10%;
 }
 
 /* CONTACT */
 
 #contact {
-	padding-top: 110px;
-	padding-bottom: 120px;
-	font-family: "Poppins", sans-serif;
-	background-color: #dc7d17;
-	color: #fff;
+  padding-top: 110px;
+  padding-bottom: 120px;
+  font-family: "Poppins", sans-serif;
+  background-color: #dc7d17;
+  color: #fff;
 }
 
-#contact-form{
-	margin: auto;
+#contact-form {
+  margin: auto;
 }
 
-#contact h2{
-	font-family: 'Bebas Neue';
-	font-size: 4rem;
+#contact h2 {
+  font-family: "Bebas Neue";
+  font-size: 4rem;
 }
 
-#contact .contact-btn{
-	padding: 1rem 2rem 1rem 2rem;
-	color: white;
-	background: #211f24;
-	margin: 3rem;
-	border-radius: 0;
-	border: none;
+#contact .contact-btn {
+  padding: 1rem 2rem 1rem 2rem;
+  color: white;
+  background: #211f24;
+  margin: 3rem;
+  border-radius: 0;
+  border: none;
 }
 
 /* FOOTER */
 
 footer {
-	font-family: "Poppins", sans-serif;
-	background-color: #000000ef;
-	color: #fff;
+  font-family: "Poppins", sans-serif;
+  background-color: #000000ef;
+  color: #fff;
 }
 
-footer p{
-	color: whitesmoke;
+footer p {
+  color: whitesmoke;
 }
 
-footer h6{
-	font-family: 'Bebas Neue';
-	font-size: 2rem;
+footer h6 {
+  font-family: "Bebas Neue";
+  font-size: 2rem;
 }
 
 /* JAVASCRIPT REVEAL */
-.reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
 }
-  
-.reveal.active{
-    transform: translateY(0);
-    opacity: 1;
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* MEDIA */
-@media (max-width: 450px){
-    
-    html{
-        font-size: 55%
-    }
-
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
 }
 
-@media (max-width: 991px){
-	html{
-		font-size: 55%;
-	}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
 }
-
