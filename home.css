@@ -52,6 +52,7 @@ section {
 
 .navbar.sticky-top {
   background-color: transparent;
+  backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
   width: 100%;
@@ -59,14 +60,14 @@ section {
 }
 
 .navbar .navbar-nav a {
-  color: white;
+  color: transparent;
   padding: 2rem;
   font-size: 2rem;
   text-align: right;
 }
 
 .navbar .navbar-nav .dropdown-toggle {
-  color: black; /* sets the text color of the drop-down toggle to a different color */
+  color: white; /* sets the text color of the drop-down toggle to a different color */
   background-color: transparent; /* sets the background color of the drop-down toggle to white */
 }
 
@@ -78,7 +79,7 @@ section {
   font-size: 2.5rem;
   font-weight: 600;
   padding: 2rem;
-  color: black;
+  color: white;
 }
 
 .navbar .custom-logo {
@@ -103,10 +104,9 @@ section {
 }
 */
 .login-title {
-  padding: 0px;
+  padding-top: 10rem;
   flex: 50%;
   color: white;
-  margin-top: 10rem;
 }
 
 .login-title span {
