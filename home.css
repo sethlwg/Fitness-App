@@ -91,22 +91,12 @@ section {
 }
 
 /* TOP PAGE */
-/*
-.login-container{
-    display: flex;
-    flex-direction: row;
-    font-size: 30px;
-    text-align: center;
-    color: white;
-    align-items: center;
-    justify-content: space-between;
-	margin-top: 2rem;
-}
-*/
+
 .login-title {
-  padding-top: 10rem;
+  padding-top: 25rem;
   flex: 50%;
   color: white;
+  
 }
 
 .login-title span {
@@ -172,13 +162,15 @@ h3 {
   margin: 5rem;
   background: var(--main-color);
   border: none;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 2rem 3rem 2rem 3rem;
   border-radius: 0;
   color: white;
+  text-transform: uppercase;
+  font-family: "Bebas Neue";
+  font-size: 2.5rem;
 }
 
 /* SERVICES */
-
 a,
 p,
 h1,
@@ -203,33 +195,10 @@ ul {
 }
 
 .section-services .header-section .title {
-  position: relative;
-  margin-bottom: 40px;
-  padding-bottom: 25px;
+  font-family: "Bebas Neue";
   text-transform: uppercase;
-  font-weight: 700;
-}
-
-.section-services .header-section .title:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140px;
-  height: 1px;
-  background-color: var(--main-color);
-}
-
-.section-services .header-section .title:after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 45px;
-  height: 3px;
-  background-color: var(--main-color);
+  font-size: 4rem;
+  margin-bottom: 4rem;
 }
 
 .section-services .header-section .title span {
@@ -238,6 +207,7 @@ ul {
 
 .section-services .header-section .description {
   color: var(--second-text);
+  font-size: 1.5rem;
 }
 
 .section-services .single-service {
@@ -249,12 +219,6 @@ ul {
 .section-services .single-service .part-1 {
   padding: 40px 40px 25px;
   border-bottom: 2px solid #1d1e23;
-}
-
-.section-services .single-service .part-1 i {
-  margin-bottom: 25px;
-  font-size: 50px;
-  color: var(--main-color);
 }
 
 .section-services .single-service .part-1 .title {
@@ -281,15 +245,11 @@ ul {
   text-decoration: none;
 }
 
-.section-services .single-service .part-2 a i {
-  margin-right: 10px;
-  color: #dc7d17;
-}
-
 /* TESTIMONIAL */
 #testimonial {
   font-family: "Poppins", sans-serif;
   background: whitesmoke;
+  color: #211f24;
 }
 
 #testimonial .title {
@@ -301,7 +261,7 @@ ul {
 #testimonial .text-test {
   color: gray;
   font-size: 1.5rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 #testimonial .althete-desc {
@@ -309,60 +269,87 @@ ul {
   padding-bottom: 2rem;
 }
 
-/*
-#testimonial .card-test{
-    background: rgba(43, 43, 43, 0.705);
-    padding: 2rem;
-}
-*/
-
-#testimonial .card-test img {
-  border-radius: 10%;
+#testimonial h5{
+  font-family: "Bebas Neue";
+  color: var(--main-color);
+  font-size: 2rem;
 }
 
 /* CONTACT */
 
-#contact {
-  padding-top: 110px;
-  padding-bottom: 120px;
-  font-family: "Poppins", sans-serif;
-  background-color: #dc7d17;
-  color: #fff;
-}
-
-#contact-form {
-  margin: auto;
-}
-
-#contact h2 {
-  font-family: "Bebas Neue";
-  font-size: 4rem;
-}
-
-#contact .contact-btn {
-  padding: 1rem 2rem 1rem 2rem;
-  color: white;
-  background: #211f24;
-  margin: 3rem;
-  border-radius: 0;
-  border: none;
-}
 
 /* FOOTER */
-
-footer {
-  font-family: "Poppins", sans-serif;
-  background-color: #000000ef;
-  color: #fff;
+footer{
+  width: 100%;
+  position: absolute;
+  background: #151417;
+  color: white;
+  padding: 100px 0 30px;
+  font-size: 13px;
+  line-height: 20px;
 }
 
-footer p {
-  color: whitesmoke;
+.row1 {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-footer h6 {
-  font-family: "Bebas Neue";
+.col1{
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col1:nth-child(2),.col1:nth-child(3){
+  flex-basis: 15%;
+}
+
+footer .logo {
+  /*width: 80px;*/
+  margin-bottom: 30px;
+}
+
+
+footer .logo span {
+  color: var(--yellow);
+}
+
+.col1 h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+  color: var(--blue);
   font-size: 2rem;
+}
+
+footer ul li {
+  list-style: none;
+  margin-bottom: 12px;   
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+footer ul li a:hover{
+  color: var(--main-color);
+}
+
+.social-icons .fab{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: white;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 /* JAVASCRIPT REVEAL */
@@ -385,6 +372,17 @@ footer h6 {
   }
 }
 
+@media (max-width: 700px){
+  footer{
+    bottom: unset;
+  }
+  .col1{
+    flex-basis: 100%;
+  }
+  .col1:nth-child(2), col1:nth-child(3){
+    flex-basis: 100%;
+  }
+}
 @media (max-width: 991px) {
   html {
     font-size: 55%;
